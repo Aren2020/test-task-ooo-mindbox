@@ -21,9 +21,9 @@ def get_product_category_pairs_with_no_category(spark, products_df, categories_d
 if __name__ == "__main__":
     spark = SparkSession.builder.appName("ProductCategoryPairs").getOrCreate()
     
-    products_df = spark.read.csv("pyspark_task/products.csv", header = True, inferSchema = True)
-    categories_df = spark.read.csv("pyspark_task/categories.csv", header = True, inferSchema = True)
-    product_category_df = spark.read.csv("pyspark_task/product_category.csv", header = True, inferSchema = True)
+    products_df = spark.read.csv("pyspark_task/csv/products.csv", header = True, inferSchema = True)
+    categories_df = spark.read.csv("pyspark_task/csv/categories.csv", header = True, inferSchema = True)
+    product_category_df = spark.read.csv("pyspark_task/csv/product_category.csv", header = True, inferSchema = True)
     
     result = get_product_category_pairs_with_no_category(spark, products_df, categories_df, product_category_df)
     

@@ -35,6 +35,6 @@ def write_csv(filename, data, fieldnames):
         writer.writerows(data)
 
 if __name__ == '__main__':
-    write_csv('pyspark_task/products.csv', products, fieldnames=['product_id', 'product_name'])
-    write_csv('pyspark_task/categories.csv', categories, fieldnames=['category_id', 'category_name'])
-    write_csv('pyspark_task/product_category.csv', product_category, fieldnames=['product_id', 'category_id'])
+    write_csv('pyspark_task/csv/products.csv', products, fieldnames=['product_id', 'product_name'])
+    write_csv('pyspark_task/csv/categories.csv', categories, fieldnames=['category_id', 'category_name'])
+    write_csv('pyspark_task/csv/product_category.csv', product_category, fieldnames=['product_id', 'category_id'])
